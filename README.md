@@ -43,7 +43,7 @@ If you are downloading this project for the first time, follow all steps below.
 ### Option A: Clone Using Git
 
 
-git clone https://github.com/YOUR_USERNAME/Job-Portfolio-Evaluator.git
+git clone https://github.com/Kaushal2306/Job-Portfolio-Evaluator.git
 cd Job-Portfolio-Evaluator
 
 
