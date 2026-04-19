@@ -1,238 +1,276 @@
-\# 🚀 Job Portfolio Evaluation using Gen AI + ML
+# 🚀 Job Portfolio Evaluation using Gen AI + ML
 
+An AI-powered Resume + GitHub + Portfolio Analyzer that evaluates resumes against job descriptions using Machine Learning, NLP, GitHub profile analysis, Portfolio scraping, and Ollama LLM feedback.
 
+---
 
-An AI-powered Resume + GitHub + Portfolio Analyzer built using Streamlit, Machine Learning, Ollama LLM, MongoDB, and NLP.
+# 🔥 Features
 
-
-
-\## 🔥 Features
-
-
-
-✅ ATS Resume Score
-
+✅ ATS Resume Score Calculation
 ✅ Resume vs Job Description Matching
-
 ✅ GitHub Profile Evaluation
-
 ✅ Portfolio Website Analysis
-
 ✅ LinkedIn PDF Parsing
-
 ✅ AI Suggestions for Improvement
-
 ✅ Resume Rewrite Generator
-
 ✅ Skill Gap Radar Chart
+✅ User Login & Saved History using MongoDB
+✅ Interactive Dashboard with Charts
 
-✅ MongoDB Login \& Saved History
+---
 
+# 🛠️ Tech Stack
 
+* Python
+* Streamlit
+* MongoDB
+* Ollama (Phi3)
+* Sentence Transformers
+* Scikit-Learn
+* SpaCy
+* Plotly
 
-\---
+---
 
+# 📥 Complete Installation Guide (For New Users)
 
+If you are downloading this project for the first time, follow all steps below.
 
-\## 🛠️ Tech Stack
+---
 
+## 1️⃣ Download Project
 
-
-\* Python
-
-\* Streamlit
-
-\* MongoDB
-
-\* Ollama (Phi3)
-
-\* Sentence Transformers
-
-\* Scikit-Learn
-
-\* SpaCy
-
-\* Plotly
-
+### Option A: Clone Using Git
 
 
-\---
-
-
-
-\## 📂 Installation
-
-
-
-\### 1 Clone Repository
-
-
-
-```bash
-
-git clone https://github.com/YOUR\_USERNAME/Job-Portfolio-Evaluator.git
-
+git clone https://github.com/YOUR_USERNAME/Job-Portfolio-Evaluator.git
 cd Job-Portfolio-Evaluator
 
-```
+
+### Option B: Download ZIP
+
+* Open GitHub repository
+* Click **Code → Download ZIP**
+* Extract folder
+* Open terminal inside project folder
+
+---
+
+## 2️⃣ Install Python
+
+Download Python 3.11+ from:
+
+[https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+⚠️ While installing, tick:
 
 
-
-\### 2 Install Dependencies
-
+Add Python to PATH
 
 
-```bash
+Verify installation:
+
+
+python --version
+
+
+---
+
+## 3️⃣ Create Virtual Environment
+
+
+python -m venv venv
+
+
+Activate it:
+
+### Windows
+
+
+venv\Scripts\activate
+
+
+### Mac / Linux
+
+
+source venv/bin/activate
+
+
+---
+
+## 4️⃣ Install Project Libraries
+
 
 pip install -r requirements.txt
 
-```
+
+---
+
+## 5️⃣ Install SpaCy Language Model
 
 
-
-\### 3 Install SpaCy Model
-
+python -m spacy download en_core_web_sm
 
 
-```bash
+---
 
-python -m spacy download en\_core\_web\_sm
+# 🧠 Install Ollama (Required for AI Feedback)
 
-```
+This project uses a local LLM through Ollama.
 
+## 6️⃣ Download Ollama
 
+Install from:
 
-\### 4 Install Ollama
+[https://ollama.com/download](https://ollama.com/download)
 
-
-
-Download from:
-
-
-
-https://ollama.com
+After installation, verify:
 
 
-
-Then run:
-
+ollama --version
 
 
-```bash
+---
+
+## 7️⃣ Download Phi3 Model
+
 
 ollama pull phi3
 
-```
+This may take a few minutes.
+
+---
+
+# 🗄️ Install MongoDB (Required for Login + History)
+
+## 8️⃣ Download MongoDB Community Server
+
+Install from:
+
+[https://www.mongodb.com/try/download/community](https://www.mongodb.com/try/download/community)
+
+Choose:
+
+* Community Server
+* Default Setup
+
+---
+
+## 9️⃣ Start MongoDB
+
+After installation:
+
+### Windows
+
+Open Services and start:
 
 
-
-\### 5 Run MongoDB
-
+MongoDB Server
 
 
-Start MongoDB locally.
+OR use terminal:
 
 
-
-Default URL used:
-
+mongod
 
 
-```bash
+Default database used:
+
 
 mongodb://localhost:27017/
 
-```
 
+---
 
+# ▶️ Run Project
 
-\### 6 Run Project
+## 🔟 Start Streamlit App
 
+Inside project folder:
 
-
-```bash
 
 streamlit run app.py
 
-```
+
+Browser opens automatically.
+
+If not:
 
 
-
-\---
-
+http://localhost:8501
 
 
-\## 👩‍💻 Team Usage
+---
+
+# 👩‍💻 Team Usage
+
+Each teammate must do once:
 
 
-
-Your teammate only needs:
-
-
-
-\* Python Installed
-
-\* MongoDB Installed
-
-\* Ollama Installed
-
-\* Phi3 Model Pulled
-
-
-
-Then run:
-
-
-
-```bash
-
+git clone YOUR_REPO_URL
+cd Job-Portfolio-Evaluator
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+ollama pull phi3
 streamlit run app.py
 
-```
+
+---
+
+# 📁 Project Structure
 
 
-
-\---
-
-
-
-\## 📸 Screenshots
+Job-Portfolio-Evaluator/
+│── app.py
+│── requirements.txt
+│── README.md
 
 
+---
 
-(Add project screenshots here)
+# 🛠 Troubleshooting
+## Python Not Found
+Reinstall Python and enable:
+Add Python to PATH
+## Ollama Not Working
+Restart system after installing Ollama.
 
+## MongoDB Connection Error
+Ensure MongoDB service is running.
 
+## Streamlit Not Found
+Run:
+pip install streamlit
 
-\---
+---
 
+# 🤝 Contributors
 
+* A.Kaushal
+* Dharshini S
+* Mounish Raja
 
-\## 🤝 Contributors
+---
 
+# ⭐ Future Improvements
 
+* Cloud Deployment
+* GPT API Integration
+* Better UI Design
+* Resume Templates
+* Email Report Generation
+* Admin Dashboard
 
-\* Kaushal Amara
+---
 
-\* Team Members
+# 📌 Notes
 
+This project runs mostly on your local machine:
 
+* MongoDB stores users/history
+* Ollama runs local AI model
+* Streamlit runs frontend dashboard
 
-\---
-
-
-
-\## ⭐ Future Improvements
-
-
-
-\* Deploy on Cloud
-
-\* GPT API Support
-
-\* Better UI
-
-\* Resume PDF Templates
-
-
-
+No paid API required.
